@@ -4,7 +4,7 @@
 </script>
 
 <button onclick={toggleTheme} aria-label="Toggle theme">
-  Theme: {current}
+  {current === 'light' ? '🌞 Light' : '🌙 Dark'}
 </button>
 
 <style>

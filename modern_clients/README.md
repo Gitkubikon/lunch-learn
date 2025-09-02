@@ -68,7 +68,7 @@ Benefits: less boilerplate vs writable stores for localized state; still use ext
 
 ## Dynamic Import
 
-`DynamicChart` waits until the user clicks before loading `SampleChart.ts`, demonstrating code splitting (inspect network panel to see the separate chunk).
+`DynamicChart` waits until the user clicks before loading `SampleChart.svelte`, demonstrating code splitting (inspect network panel to see the separate chunk).
 
 ## Path Aliases
 ## Global Store vs Local Rune State

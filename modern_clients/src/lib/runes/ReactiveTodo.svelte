@@ -26,10 +26,8 @@
 
   let newText = $state('')
 
-  $effect(() => {
-    // Simple demo effect; would sync to localStorage in real app
-    console.debug('Todos changed', todos)
-  })
+  // Effect placeholder (no noisy logging)
+  $effect(() => { /* side effects here (e.g. persistence) */ })
 
   const visible: Todo[] = $derived(
     filter === 'open' ? todos.filter(t => !t.done)

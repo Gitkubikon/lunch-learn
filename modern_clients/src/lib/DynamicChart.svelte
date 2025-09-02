@@ -6,8 +6,8 @@
     if (ChartComponent || loading) return
     loading = true
     // Fake dynamic module; in a real project you'd import a heavy lib
-  const mod = await import('./charts/SampleChart')
-  ChartComponent = mod.SampleChart
+  const mod = await import('./charts/SampleChart.svelte')
+  ChartComponent = mod.default
     loading = false
   }
 </script>
