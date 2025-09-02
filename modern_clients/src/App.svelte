@@ -4,9 +4,13 @@
   import Counter from './lib/Counter.svelte'
   import ReactiveTodo from '@/lib/runes/ReactiveTodo.svelte'
   import DynamicChart from '@/lib/DynamicChart.svelte'
+  import EnvInfo from '@/lib/EnvInfo.svelte'
+  import ThemeSwitcher from '@/lib/ThemeSwitcher.svelte'
+  import { theme } from '@/lib/stores/theme'
+  $: currentTheme = $theme
 </script>
 
-<main>
+<main class={currentTheme}>
   <div>
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
@@ -16,6 +20,8 @@
     </a>
   </div>
   <h1>Vite + Svelte</h1>
+  <ThemeSwitcher />
+  <EnvInfo />
 
   <div class="card">
     <h2>Counter (Rune)</h2>
@@ -36,6 +42,8 @@
 </main>
 
 <style>
+  main.light { background:#fff; color:#222; }
+  main.dark { background:#111; color:#eee; }
   .logo {
     height: 6em;
     padding: 1.5em;
